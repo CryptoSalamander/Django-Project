@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CoffeNamu Market</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% if user.is_authenticated %}
+<a href="demo/logout"><button style = "background-color: white; color:  #ffcc80; border :  3px solid  #ffcc80; font-size: 16px; width: 150px; height: 50px ">LOG OUT</button></a>
+{% else %}
+<a href="demo/login"><button style = "background-color: white; color:  #ffcc80; border :  3px solid  #ffcc80; font-size: 16px; width: 150px; height: 50px ">LOG IN</button></a>
+{% endif %}
+<a href="demo/register"><button style = "background-color: white; font-size: 16px; width: 150px; height: 50px; color:  #ffcc80; border :  3px solid  #ffcc80; ">SIGN UP</button></a>
+<div class="row" style = "background: #ffcc80 ;
+                          border-radius: 25px;
+                          padding: 20px;
+                          width: 1300px;
+                          height: 600px;
+                          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                          position: relative;
+                          top:15px;
+                          left: 200px">
+<div class="container">
+    <table class="table table-striped" style = "border : 3px solid white">
+        <thead>
+        <tr>
+            <th><B><h1>Name of Product</h1></B></th>
+            <th><B><h1>Information</h1></B></th>
+            <th><B><h1>Classification</h1></B></th>
+            <th><B><h1>How many hits ?</h1></B></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for Item in items %}
+        <tr>
+            <td> <a href = "items/{{ Item.item_number }}/">{{ Item.name }}</a></td>
+            <td>{{ Item.introduction }}</td>
+            <td>{{ Item.range }}</td>
+            <td>{{ Item.viewnum }}</td>
+        </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+</div>
+</div>
+</body>

@@ -1,0 +1,38 @@
+.button_1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #f50057; /* Green */
+    border-radius: 8px;
+
+}
+
+.button_2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #d500f9; /* Green */
+    border-radius: 8px;
+
+}
+
+.card-title {
+    font-family: "sans-serif";
+    font-weight: bold;
+    font-size: large;
+
+}
+
+.card {
+    border: 2px solid #ff1744;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.select
+{
+    font-family: "sans-serif";
+    font-weight: bold;
+    font-size: medium;
+}
